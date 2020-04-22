@@ -1,0 +1,275 @@
+//
+// USE THIS AS TEMPLATE FOR CREATING A BALLANTINE ADULT FANTASY API!!!
+// ///////////////////////////////////////////////////////////////////
+//
+// According to Wikipedia, there are 18 in the "pre-series".
+// and 65 in the series proper, with 2 "leftovers".
+// and then another 26 known to have been wanted for the series by Lin Carter.
+// ////////////
+// TOTAL OF 111
+// ////////////
+
+const bafbooks = [{
+  id: 1, // publishing order ... ?
+  title: 'The Hobbit',
+  author: 'J.R.R. Tolkien',
+  publishyear: '1965', // and month?
+  publishoriginyear: '1937',
+  originalpublisher: 'George Allen & Unwin Ltd.',
+  editor: 'Lin Carter', // all of them are, tho...
+  description: 'This here could get super long, quick...'
+}, {
+  id: 2,
+  title: 'The Fellowship of the Ring',
+  author: 'J.R.R. Tolkien',
+  publishyear: '1965',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 3,
+  title: 'The Two Towers',
+  author: 'J.R.R. Tolkien',
+  publishyear: '1965',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 4,
+  title: 'The Return of the King',
+  author: 'J.R.R. Tolkien',
+  publishyear: '1965',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 5,
+  title: 'The Tolkien Reader',
+  author: 'J.R.R. Tolkien',
+  publishyear: '1966',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 6,
+  title: 'The Worm Ouroboros',
+  author: 'E.R. Eddison',
+  publishyear: '1967',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 7,
+  title: 'Mistress of Mistresses',
+  author: 'E.R. Eddison',
+  publishyear: '1967',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 8,
+  title: 'A Fish Dinner in Memison',
+  author: 'E.R. Eddison',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 9,
+  title: 'The Road Goes Ever On',
+  author: ['J.R.R. Tolkien', 'Donald Swann'], // multiple authors?
+  publishyear: '',
+  publishoriginyear: '1968',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 10,
+  title: 'Titus Groan',
+  author: 'Mervyn Peake',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 11,
+  title: 'Gormenghast',
+  author: 'Mervyn Peake',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 12,
+  title: 'Titus Alone',
+  author: 'Mervyn Peake',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 13,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 14,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 15,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 16,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 17,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 18,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 19,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 20,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 21,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 22,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 23,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 24,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 4,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 4,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 4,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 4,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}, {
+  id: 4,
+  title: '',
+  author: '',
+  publishyear: '',
+  publishoriginyear: '',
+  originalpublisher: '',
+  editor: 'Lin Carter',
+  description: ''
+}]
+
+module.exports = bafbooks
