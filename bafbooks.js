@@ -226,7 +226,7 @@ const bafbooks = [{
   editor: 'Lin Carter',
   description: ''
 }, {
-  id: 4,
+  id: 25,
   title: '',
   author: [''],
   publishyear: '',
@@ -235,7 +235,7 @@ const bafbooks = [{
   editor: 'Lin Carter',
   description: ''
 }, {
-  id: 4,
+  id: 26,
   title: '',
   author: [''],
   publishyear: '',
@@ -244,7 +244,7 @@ const bafbooks = [{
   editor: 'Lin Carter',
   description: ''
 }, {
-  id: 4,
+  id: 27,
   title: '',
   author: [''],
   publishyear: '',
@@ -253,7 +253,7 @@ const bafbooks = [{
   editor: 'Lin Carter',
   description: ''
 }, {
-  id: 4,
+  id: 28,
   title: '',
   author: [''],
   publishyear: '',
@@ -262,7 +262,7 @@ const bafbooks = [{
   editor: 'Lin Carter',
   description: ''
 }, {
-  id: 4,
+  id: 29,
   title: '',
   author: [''],
   publishyear: '',
