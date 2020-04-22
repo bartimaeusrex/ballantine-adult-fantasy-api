@@ -10,7 +10,7 @@
 // ////////////
 
 const bafbooks = [{
-  id: 1, // publishing order ... ?
+  id: 1, // publishing order ... Take into account pre- and post-series, too?
   title: 'The Hobbit',
   author: 'J.R.R. Tolkien',
   publishyear: '1965', // and month?
@@ -23,8 +23,8 @@ const bafbooks = [{
   title: 'The Fellowship of the Ring',
   author: 'J.R.R. Tolkien',
   publishyear: '1965',
-  publishoriginyear: '',
-  originalpublisher: '',
+  publishoriginyear: '1954',
+  originalpublisher: 'George Allen & Unwin Ltd.',
   editor: 'Lin Carter',
   description: ''
 }, {
@@ -32,8 +32,8 @@ const bafbooks = [{
   title: 'The Two Towers',
   author: 'J.R.R. Tolkien',
   publishyear: '1965',
-  publishoriginyear: '',
-  originalpublisher: '',
+  publishoriginyear: '1954',
+  originalpublisher: 'George Allen & Unwin Ltd.',
   editor: 'Lin Carter',
   description: ''
 }, {
@@ -41,8 +41,8 @@ const bafbooks = [{
   title: 'The Return of the King',
   author: 'J.R.R. Tolkien',
   publishyear: '1965',
-  publishoriginyear: '',
-  originalpublisher: '',
+  publishoriginyear: '1955',
+  originalpublisher: 'George Allen & Unwin Ltd.',
   editor: 'Lin Carter',
   description: ''
 }, {
@@ -50,8 +50,8 @@ const bafbooks = [{
   title: 'The Tolkien Reader',
   author: 'J.R.R. Tolkien',
   publishyear: '1966',
-  publishoriginyear: '',
-  originalpublisher: '',
+  publishoriginyear: '1966',
+  originalpublisher: 'Ballantine',
   editor: 'Lin Carter',
   description: ''
 }, {
@@ -84,7 +84,7 @@ const bafbooks = [{
 }, {
   id: 9,
   title: 'The Road Goes Ever On',
-  author: ['J.R.R. Tolkien', 'Donald Swann'], // multiple authors?
+  author: ['J.R.R. Tolkien', 'Donald Swann'],
   publishyear: '',
   publishoriginyear: '1968',
   originalpublisher: '',
@@ -119,54 +119,54 @@ const bafbooks = [{
   description: ''
 }, {
   id: 13,
-  title: '',
-  author: '',
-  publishyear: '',
+  title: 'A Voyage To Arcturus',
+  author: 'David Lindsay',
+  publishyear: '1968',
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
   description: ''
 }, {
   id: 14,
-  title: '',
-  author: '',
-  publishyear: '',
+  title: 'The Last Unicorn',
+  author: 'Peter S. Beagle',
+  publishyear: '1969',
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
   description: ''
 }, {
   id: 15,
-  title: '',
-  author: '',
-  publishyear: '',
+  title: 'A Fine and Private Place',
+  author: 'Peter S. Beagle',
+  publishyear: '1969',
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
   description: ''
 }, {
   id: 16,
-  title: '',
-  author: '',
-  publishyear: '',
+  title: 'Smith of Wootton Major and Farmer Giles of Ham',
+  author: 'J.R.R. Tolkien',
+  publishyear: '1969',
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
   description: ''
 }, {
   id: 17,
-  title: '',
-  author: '',
-  publishyear: '',
+  title: 'Tolkien: A Look Behind "The Lord of the Rings"',
+  author: 'Lin Carter',
+  publishyear: '1969',
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
   description: ''
 }, {
   id: 18,
-  title: '',
-  author: '',
-  publishyear: '',
+  title: 'The Mezentian Gate',
+  author: 'E.R. Eddison',
+  publishyear: '1969',
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
