@@ -1,14 +1,14 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-// const { getAllBooks, getBooksByKeyword, saveNewBook }
-//  = require('./controllers/bafbooks')
+const { getAllBooks, getBooksByKeyword, saveNewBook }
+ = require('./controllers/bafbooks')
 const app = express()
 
-app.get('/books', getAllBooks)
+app.get('/bafbooks', getAllBooks)
 
-app.get('/books/:title', getBookByKeyword)
+app.get('/bafbooks/:title', getBooksByKeyword)
 
-app.post('/books', bodyParser.json(), saveNewBook)
+app.post('/bafbooks', bodyParser.json(), saveNewBook)
 
 app.listen(8080, () => {
   // eslint-disable-next-line no-console
