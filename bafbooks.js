@@ -4,9 +4,8 @@
 //
 // According to Wikipedia, there are 18 in the "pre-series".
 // and 65 in the series proper, with 2 "leftovers".
-// and then another 26 known to have been wanted for the series by Lin Carter.
 // ////////////
-// TOTAL OF 111
+// TOTAL OF 85
 // ////////////
 
 const bafbooks = [{
@@ -167,105 +166,6 @@ const bafbooks = [{
   title: 'The Mezentian Gate',
   author: ['E.R. Eddison'],
   publishyear: '1969',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 19,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 20,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 21,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 22,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 23,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 24,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 25,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 26,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 27,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 28,
-  title: '',
-  author: [''],
-  publishyear: '',
-  publishoriginyear: '',
-  originalpublisher: '',
-  editor: 'Lin Carter',
-  description: ''
-}, {
-  id: 29,
-  title: '',
-  author: [''],
-  publishyear: '',
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
