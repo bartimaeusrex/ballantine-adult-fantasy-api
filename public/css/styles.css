@@ -1,0 +1,38 @@
+.content {
+  margin: 0 auto;
+  width:500px;
+  text-align:center;
+}
+
+.title {
+  text-align:center;
+}
+
+.description, ul, li {
+  text-align:left;
+}
+
+.item {
+  color:rgb(39, 39, 39);
+  background-color:rgba(205, 230, 241, 0.568);
+  padding:5px;
+  text-align:left;
+  font-family:'Courier New';
+  font-weight:bold;
+  font-size: large;
+  /* margin-left:25px; */
+}
+
+.code {
+  font-family:'Courier New';
+  font-size: smaller;
+  background-color:rgba(155, 146, 132, 0.137);
+  padding:10px;
+  margin:10px;
+  border:1px solid rgba(0, 0, 0, 0.5);
+}
+
+.calligraph {
+  width:150px;
+  margin:20px;
+}

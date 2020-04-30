@@ -1,0 +1,31 @@
+{
+  "name": "ballantine-adult-fantasy-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon index.js",
+    "lint": "npm run puglint && npm run eslint",
+    "lint:fix": "./node_modules/.bin/eslint --fix --format codeframe .",
+    "lint:puglint": "./node_modules/.bin/pug-lint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartimaeusrex/ballantine-adult-fantasy-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bartimaeusrex/ballantine-adult-fantasy-api/issues"
+  },
+  "homepage": "https://github.com/bartimaeusrex/ballantine-adult-fantasy-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "pug-lint": "^2.6.0"
+  }
+}
