@@ -16,7 +16,7 @@ const bafbooks = [{
   publishoriginyear: '1937',
   originalpublisher: 'George Allen & Unwin Ltd.',
   editor: 'Lin Carter', // all of them are, tho...
-  description: 'This here could get super long, quick...'
+  coverartist: 'Barbara Remington'
 }, {
   id: 2,
   title: 'The Fellowship of the Ring',
@@ -25,7 +25,7 @@ const bafbooks = [{
   publishoriginyear: '1954',
   originalpublisher: 'George Allen & Unwin Ltd.',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Barbara Remington'
 }, {
   id: 3,
   title: 'The Two Towers',
@@ -34,7 +34,7 @@ const bafbooks = [{
   publishoriginyear: '1954',
   originalpublisher: 'George Allen & Unwin Ltd.',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Barbara Remington'
 }, {
   id: 4,
   title: 'The Return of the King',
@@ -43,7 +43,7 @@ const bafbooks = [{
   publishoriginyear: '1955',
   originalpublisher: 'George Allen & Unwin Ltd.',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Barbara Remington'
 }, {
   id: 5,
   title: 'The Tolkien Reader',
@@ -52,16 +52,16 @@ const bafbooks = [{
   publishoriginyear: '1966',
   originalpublisher: 'Ballantine',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }, {
   id: 6,
   title: 'The Worm Ouroboros',
   author: ['E.R. Eddison'],
   publishyear: '1967',
-  publishoriginyear: '',
-  originalpublisher: '',
+  publishoriginyear: '1922',
+  originalpublisher: 'Jonathan Cape',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Barbara Remington'
 }, {
   id: 7,
   title: 'Mistress of Mistresses',
@@ -70,7 +70,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Barbara Remington'
 }, {
   id: 8,
   title: 'A Fish Dinner in Memison',
@@ -79,7 +79,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Barbara Remington'
 }, {
   id: 9,
   title: 'The Road Goes Ever On',
@@ -88,7 +88,7 @@ const bafbooks = [{
   publishoriginyear: '1968',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }, {
   id: 10,
   title: 'Titus Groan',
@@ -97,7 +97,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Bob Pepper'
 }, {
   id: 11,
   title: 'Gormenghast',
@@ -106,7 +106,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Bob Pepper'
 }, {
   id: 12,
   title: 'Titus Alone',
@@ -115,7 +115,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: 'Bob Pepper'
 }, {
   id: 13,
   title: 'A Voyage To Arcturus',
@@ -124,7 +124,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }, {
   id: 14,
   title: 'The Last Unicorn',
@@ -133,7 +133,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }, {
   id: 15,
   title: 'A Fine and Private Place',
@@ -142,7 +142,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }, {
   id: 16,
   title: 'Smith of Wootton Major and Farmer Giles of Ham',
@@ -151,7 +151,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }, {
   id: 17,
   title: 'Tolkien: A Look Behind "The Lord of the Rings"',
@@ -160,7 +160,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }, {
   id: 18,
   title: 'The Mezentian Gate',
@@ -169,7 +169,7 @@ const bafbooks = [{
   publishoriginyear: '',
   originalpublisher: '',
   editor: 'Lin Carter',
-  description: ''
+  coverartist: ''
 }]
 
 module.exports = bafbooks
