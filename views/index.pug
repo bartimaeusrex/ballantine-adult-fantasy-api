@@ -15,6 +15,7 @@ html
           | the official unicorn colophon. In the series proper, there 
           | were a total of 65 books published, 
           | and two "post-series", for a grand total of 85 all told.
+        p Pre-series 1-18. Proper series 19-83. Post-series 84-85.
       ul
         li.item GET /books
         ul
@@ -24,7 +25,7 @@ html
         li.item GET /books/{title}
         ul
           li Route: localhost:8080/books/{title}
-          li Description: Returns a book matching the title... ... .
+          li Description: Returns a book matching the title.
           br
         li.item GET /books/{author}
         ul
@@ -44,16 +45,20 @@ html
           br
         li.item PATCH
         ul
-          li Route: 
+          li Route: localhost:8080/books/{id}:coverartist
           li Body:
             .code { "coverartist": "Gervasio Gallardo" }
+          li Description: Adds/updates the value to the key in the specified title. 
+          //- Unsure of the routes, as yet, how to reference...
+          //- would I have to do a different patch for each key/value?
           br
-        li.item PUT
-        ul
-          li
-          br
+        //- li.item PUT
+        //- ul
+        //-   li
+        //-   br
         li.item DELETE
         ul
-          li
+          li Route: localhost:8080/books/{id}
+          li Description: Deletes the book associated with the ID provided (numbers 1 through 85).
           br
       img.calligraph(src="/img/calligraph.png")

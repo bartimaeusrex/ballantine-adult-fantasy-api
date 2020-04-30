@@ -13,6 +13,9 @@
 }
 
 .item {
+  color:rgb(39, 39, 39);
+  background-color:rgba(205, 230, 241, 0.568);
+  padding:5px;
   text-align:left;
   font-family:'Courier New';
   font-weight:bold;
@@ -23,7 +26,7 @@
 .code {
   font-family:'Courier New';
   font-size: smaller;
-  background-color:rgba(155, 146, 132, 0.288);
+  background-color:rgba(155, 146, 132, 0.137);
   padding:10px;
   margin:10px;
   border:1px solid rgba(0, 0, 0, 0.5);
