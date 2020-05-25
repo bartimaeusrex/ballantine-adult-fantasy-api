@@ -1,8 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+
 const bafbooks = require('./bafbooks')
-const { getAllBooks, getBooksByKeyword, saveNewBook }
- = require('./controllers/bafbooks')
+const { getAllAuthors, getAuthorByKeyword } = require('./controllers/authors')
+const {
+  getAllBooks, getBooksByKeyword, saveNewBook, deleteBookById, patchBookById
+} = require('./controllers/books')
 const app = express()
 
 app.use(express.static('public'))
@@ -13,11 +16,16 @@ app.get('/', (request, response) => {
   return response.render('index', { bafbooks })
 })
 
-app.get('/bafbooks', getAllBooks)
+app.get('/books', getAllBooks)
+app.get('/books/:keyword', getBooksByKeyword)
 
-app.get('/bafbooks/:title', getBooksByKeyword)
+app.get('/authors', getAllAuthors)
+app.get('/authors/:keyword', getAuthorByKeyword)
 
-app.post('/bafbooks', bodyParser.json(), saveNewBook)
+app.post('/books', bodyParser.json(), saveNewBook)
+app.patch('/books/:id', bodyParser.json(), patchBookById)
+
+app.delete('/books/:id', deleteBookById)
 
 app.listen(8080, () => {
   // eslint-disable-next-line no-console
