@@ -14,17 +14,17 @@ const getBooksByKeyword = async (request, response) => {
   // try {
   const { keyword } = request.params
 
-  const book = await models.Books.findAll({
+  const book = await models.Books.findOne({
     where: {
       [models.Op.or]: [
         { id: keyword },
         { title: { [models.Op.like]: `%${keyword}%` } }
       ]
     },
-    include: [{
-      model: models.Authors,
-      // include: [{ model: models.PublishInfo }]
-    }],
+    include: [
+      { model: models.Authors },
+      // { model: models.PublishInfo }
+    ],
   })
 
   return book

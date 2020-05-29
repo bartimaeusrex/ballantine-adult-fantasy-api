@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-// const bafbooks = require('./bafbooks')
+
 const { getAllAuthors, getAuthorByKeyword } = require('./controllers/authors')
 const {
   getAllBooks, getBooksByKeyword, saveNewBook, deleteBookById, patchBookById
@@ -11,10 +11,6 @@ const app = express()
 app.use(express.static('public'))
 
 app.set('view engine', 'pug')
-
-// app.get('/', (request, response) => {
-//   return response.render('index', { bafbooks })
-// })
 
 app.get('/', (request, response) => {
   return response.render('index')
@@ -33,5 +29,5 @@ app.delete('/books/:id', deleteBookById)
 
 app.listen(8080, () => {
   // eslint-disable-next-line no-console
-  console.log('Listening on port 8080.')
+  console.log('Listening on port 8080...')
 })
