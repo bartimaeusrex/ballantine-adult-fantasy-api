@@ -7,10 +7,10 @@
     "dev": "./node_modules/.bin/env-cmd ./node_modules/.bin/nodemon index.js",
     "dev:migrate": "./node_modules/.bin/env-cmd ./node_modules/.bin/sequelize db:migrate --env development --config ./config/sequelize.js",
     "eslint": "./node_modules/.bin/eslint --format codeframe .",
-    "lint": "npm run puglint && npm run eslint",
+    "lint": "npm run lint:puglint && npm run lint:eslint",
     "lint:fix": "./node_modules/.bin/eslint --fix --format codeframe .",
     "lint:puglint": "./node_modules/.bin/pug-lint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/env-cmd ./node_modules/.bin/mocha tests/**/*.test.js"
   },
   "repository": {
     "type": "git",

@@ -7,30 +7,35 @@ html
       h2 Documentation for API
       div.description
         p Instructions as to how to make proper use of the BAF API.
-        p Quick reference outside of the technical details: 
-        p The series ran from 1969-1974 and was edited by Lin Carter. 
-          | There are 18 books "pre-series" that are spiritually if not 
-          | technically published under the Ballantine Adult Fantasy label, 
-          | but many of these were later reprinted and emblazoned with 
-          | the official unicorn colophon. In the series proper, there 
-          | were a total of 65 books published, 
+        p Quick reference outside of the technical details:
+        p The series ran from 1969-1974 and was edited by Lin Carter.
+          |  There are 18 books "pre-series" that are spiritually if not
+          | technically published under the Ballantine Adult Fantasy label,
+          | but many of these were later reprinted and emblazoned with
+          | the official unicorn colophon. In the series proper, there
+          | were a total of 65 books published,
           | and two "post-series", for a grand total of 85 all told.
-        p Pre-series 1-18. Proper series 19-83. Post-series 84-85.
+        p For the purposes of this API, only those first 18 are currently documented.
       ul
         li.item GET /books
         ul
-          li Route: localhost:8080/books
-          li Description: Returns a list of all books in the series.
+          li Route: localhost:8080
+            a(href="/books") /books
+          li Description: Returns a list of all documented books.
           br
-        li.item GET /books/{title}
+        li.item GET /books/{id or title}
         ul
-          li Route: localhost:8080/books/{title}
+          li Route: localhost:8080/books/{id or title}
           li Description: Returns a book matching the title.
+          li Example:
+            a(href="/books/unicorn") /books/unicorn
           br
-        li.item GET /books/{author}
+        li.item GET /authors/{id or name}
         ul
-          li Route: localhost:8080/books/{author}
+          li Route: localhost:8080/authors/{id or name}
           li Description: Returns the matching author's books
+          li Example:
+            a(href="/authors/beagle") /authors/beagle
           br
         li.item POST /books
         ul
@@ -38,28 +43,21 @@ html
           li Headers:
           ul
             li Content-Type: application/json
-            li Authorization Bearer YOUR_API_KEY_HERE
           li Body:
-            .code { "title": "Vathek", "author": ["William Beckford"], "publishyear": "1971", "publishoriginyear": "1786", "originalpublisher": "J. Johnson", "coverartist": "Ray Cruz" }
+            .code { "title": "Vathek", "author": "William Beckford", "publishYear": "1971", "publishOriginYear": "1786", "originalPublisher": "J. Johnson", "coverArtist": "Ray Cruz" }
           li Description: Creates a new book from the data provided.
           br
         li.item PATCH
         ul
-          li Route: localhost:8080/books/{id}:coverartist
+          li Route: localhost:8080/books/:{coverArtist}
           li Body:
-            .code { "coverartist": "Gervasio Gallardo" }
+            .code { "coverArtist": "Gervasio Gallardo" }
           li Description: Adds/updates the value to the key in the specified title, 
             | in this case the name of the cover artist. 
-          //- Unsure of the routes, as yet, how to reference...
-          //- would I have to do a different patch for each key/value?
           br
-        //- li.item PUT
-        //- ul
-        //-   li
-        //-   br
         li.item DELETE
         ul
-          li Route: localhost:8080/books/{id}
-          li Description: Deletes the book associated with the ID provided (numbers 1 through 85).
+          li Route: localhost:8080/books/:{id}
+          li Description: Deletes the book associated with the ID provided (numbers 1 through 18, currently).
           br
       img.calligraph(src="/img/calligraph.png")

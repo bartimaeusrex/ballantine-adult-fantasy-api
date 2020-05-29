@@ -1,32 +1,40 @@
-const books = require('../bafbooks')
 const models = require('../models')
 
-const getAllBooks = (request, response) => {
-  return response.send(books)
-}
-
-const getBooksByKeyword = (request, response) => {
+const getAllBooks = async (request, response) => {
   try {
-    const { title } = request.params
+    const books = await models.Books.findAll()
 
-    const matchingBook = books.filter(book => {
-      const isPartialMatch = (book.author.concat(book.title)).join().toLowerCase()
-
-      return isPartialMatch.includes(title.toLowerCase())
-    })
-
-    return matchingBook.length
-      ? response.send(matchingBook)
-      : response.status(404).send('Can\'t find that book.')
+    return response.send(books)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve book, please try again.')
+    return response.status(500).send('Unable to retrieve books list, please try again!')
   }
 }
 
-// const patchBookById = (request, response) => {
-//   const { id } = request.params
+const getBooksByKeyword = async (request, response) => {
+  // try {
+  const { keyword } = request.params
 
-// }
+  const book = await models.Books.findAll({
+    where: {
+      [models.Op.or]: [
+        { id: keyword },
+        { title: { [models.Op.like]: `%${keyword}%` } }
+      ]
+    },
+    include: [{
+      model: models.Authors,
+      // include: [{ model: models.PublishInfo }]
+    }],
+  })
+
+  return book
+    ? response.send(book)
+    : response.sendStatus(404)
+  // } catch (error) {
+  //   return response.status(500).send('Unable to retrieve book, please try again.')
+  // }
+}
+
 
 const deleteBookById = async (request, response) => {
   try {
@@ -43,25 +51,39 @@ const deleteBookById = async (request, response) => {
   }
 }
 
-const saveNewBook = (request, response) => {
+const patchBookById = async (request, response) => {
+  try {
+    const { keyword } = request.params
+
+    const coverArtist = await models.PublishInfo.update({ coverArtist: `%${keyword}%` }, {
+      where: {
+        coverArtist: null
+      }
+    })
+
+    return response.status(201).send(coverArtist)
+  } catch (error) {
+    return response.status(500).send('Unable to patch book, please try again')
+  }
+}
+
+const saveNewBook = async (request, response) => {
   const {
-    id, title, author, publishYear, publishOriginYear,
-    originalPublisher, coverArtist
+    title, author, publishYear, publishOriginYear, originalPublisher, coverArtist
   } = request.body
 
-  if (!id || !title || !author || !publishYear ||
+  if (!title || !author || !publishYear ||
     !publishOriginYear || !originalPublisher || !coverArtist) {
     return response.status(400).send('All fields are required.')
   }
 
-  const newBook = {
-    id, title, author, publishYear, publishOriginYear, originalPublisher, coverArtist
-  }
-
-  books.push(newBook)
+  const newBook = await models.Books.create({
+    title, author, publishYear, publishOriginYear, originalPublisher, coverArtist,
+  })
 
   return response.status(201).send(newBook)
 }
+
 
 module.exports = {
   getAllBooks,
