@@ -3,7 +3,6 @@ const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 const models = require('../../models')
 const {
-  // eslint-disable-next-line no-unused-vars
   before, beforeEach, afterEach, after, describe, it
 } = require('mocha')
 const { booksList, singleBook, postedBook } = require('../mocks/books')
@@ -48,6 +47,10 @@ describe('Controllers - Books', () => {
 
   afterEach(() => {
     sandbox.reset()
+  })
+
+  after(() => {
+    sandbox.restore()
   })
 
   describe('getAllBooks', () => {
@@ -123,24 +126,22 @@ describe('Controllers - Books', () => {
       expect(stubbedStatusDotSend).to.have.been.calledWith(singleBook)
     })
 
-    it('returns a 400 status when not all required fields are provided (missing location)', async () => {
+    it('returns a 400 status when not all required fields are provided (missing artistId)', async () => {
       const {
-        title, author, publishYear, publishOriginYear, originalPublisher, coverArtist
+        title, authorId, publishInfoId, originalPublisherId
       } = postedBook
       const request = {
         body: {
-          title, author, publishYear, publishOriginYear, originalPublisher, coverArtist
+          title, authorId, publishInfoId, originalPublisherId
         }
       }
 
       await saveNewBook(request, response)
 
       expect(stubbedStatus).to.have.been.calledWith(400)
-      // eslint-disable-next-line max-len
       expect(stubbedStatusDotSend).to.have.been.calledWith('All fields are required.')
     })
 
-    // eslint-disable-next-line max-len
     it('returns a 500 when an error occurs saving the new book', async () => {
       const request = { body: postedBook }
 

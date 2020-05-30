@@ -11,7 +11,7 @@ module.exports = {
       deletedAt: { type: Sequelize.DATE },
     })
 
-    await queryInterface.createTable('artist', {
+    await queryInterface.createTable('artists', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       coverArtist: { type: Sequelize.STRING, allowNull: false },
       createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
@@ -49,10 +49,10 @@ module.exports = {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       title: { type: Sequelize.STRING, allowNull: false },
       authorId: { type: Sequelize.INTEGER, allowNull: false, references: { model: 'authors', key: 'id' } },
-      publishInfoId: { type: Sequelize.INTEGER, allowNull: false, references: { model: 'publishinfo', key: 'id' } },
+      publishInfoId: { type: Sequelize.INTEGER, allowNull: false, references: { model: 'publishInfo', key: 'id' } },
       // eslint-disable-next-line max-len
       originalPublisherId: { type: Sequelize.INTEGER, allowNull: false, references: { model: 'originalpublisher', key: 'id' } },
-      artistId: { type: Sequelize.INTEGER, allowNull: false, references: { model: 'artist', key: 'id' } },
+      artistId: { type: Sequelize.INTEGER, allowNull: false, references: { model: 'artists', key: 'id' } },
       createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
         type: Sequelize.DATE,
@@ -66,7 +66,7 @@ module.exports = {
     await queryInterface.dropTable('books')
     await queryInterface.dropTable('publishInfo')
     await queryInterface.dropTable('originalPublisher')
-    await queryInterface.dropTable('artist')
+    await queryInterface.dropTable('artists')
 
     return queryInterface.dropTable('authors')
   }

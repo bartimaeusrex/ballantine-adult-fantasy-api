@@ -1,9 +1,9 @@
-const Authors = (connection, Sequelize) => {
-  return connection.define('authors', {
+const Artists = (connection, Sequelize) => {
+  return connection.define('artists', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-    author: { type: Sequelize.STRING, allowNull: false },
+    coverArtist: { type: Sequelize.STRING, allowNull: false },
   }, { defaultScope: { attributes: { exclude: ['id', 'createdAt', 'updatedAt', 'deletedAt'] } } },
   { paranoid: true })
 }
 
-module.exports = Authors
+module.exports = Artists

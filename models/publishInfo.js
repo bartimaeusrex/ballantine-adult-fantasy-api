@@ -3,7 +3,7 @@ const PublishInfo = (connection, Sequelize) => {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     publishYear: { type: Sequelize.STRING, allowNull: false },
     publishOriginYear: { type: Sequelize.STRING, allowNull: false },
-  }, { defaultScope: { attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] } } },
+  }, { defaultScope: { attributes: { exclude: ['id', 'createdAt', 'updatedAt', 'deletedAt'] } } },
   { paranoid: true })
 }
 

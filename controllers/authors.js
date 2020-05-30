@@ -22,7 +22,10 @@ const getAuthorByKeyword = async (request, response) => {
         ],
       },
       include: [
-        { model: models.Books }
+        {
+          model: models.Books,
+          attributes: ['title']
+        }
       ],
     })
 

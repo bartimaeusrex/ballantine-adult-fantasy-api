@@ -7,12 +7,7 @@ const authorsList = [{
 }]
 
 const singleAuthor = {
-  title: 'Gormenghast',
-  author: 'Mervyn Peake',
-  publishyear: '1968',
-  publishoriginyear: '1950',
-  originalpublisher: 'Eyre & Spottiswoode',
-  coverartist: 'Bob Pepper'
+  author: 'E.R. Eddison'
 }
 
 module.exports = {

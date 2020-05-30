@@ -48,6 +48,10 @@ describe('Controllers - Authors', () => {
     sandbox.reset()
   })
 
+  after(() => {
+    sandbox.restore()
+  })
+
   describe('getAllAuthors', () => {
     it('retrieves a list of authors from the database and calls response.send() with the list', async () => {
       stubbedFindAll.returns(authorsList)

@@ -10,7 +10,7 @@ module.exports = {
       { author: 'Lin Carter' },
     ])
 
-    await queryInterface.bulkInsert('artist', [
+    await queryInterface.bulkInsert('artists', [
       { coverArtist: 'Barbara Remington' },
       { coverArtist: 'Pauline Baynes' },
       { coverArtist: 'Bob Pepper' },
@@ -186,7 +186,7 @@ module.exports = {
     await queryInterface.bulkDelete('books', [])
     await queryInterface.bulkDelete('publishInfo', [])
     await queryInterface.bulkDelete('originalPublisher', [])
-    await queryInterface.bulkDelete('artist', [])
+    await queryInterface.bulkDelete('artists', [])
 
     return queryInterface.bulkDelete('authors', [])
   }
