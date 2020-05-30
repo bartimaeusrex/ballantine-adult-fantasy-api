@@ -1,0 +1,63 @@
+html
+  include partials/head
+  body
+    div.content
+      h1.title Ballantine Adult Fantasy
+      img(src="/img/unicorncolophon.jpg", alt="Ballantine Adult Fantasy - Unicorn Colophon")
+      h2 Documentation for API
+      div.description
+        p Instructions as to how to make proper use of the BAF API.
+        p Quick reference outside of the technical details:
+        p The series ran from 1969-1974 and was edited by Lin Carter.
+          |  There are 18 books "pre-series" that are spiritually if not
+          | technically published under the Ballantine Adult Fantasy label,
+          | but many of these were later reprinted and emblazoned with
+          | the official unicorn colophon. In the series proper, there
+          | were a total of 65 books published,
+          | and two "post-series", for a grand total of 85 all told.
+        p For the purposes of this API, only those first 18 are currently documented.
+      ul
+        li.item GET /books
+        ul
+          li Route: localhost:8080
+            a(href="/books") /books
+          li Description: Returns a list of all documented books.
+          br
+        li.item GET /books/{id or title}
+        ul
+          li Route: localhost:8080/books/{id or title}
+          li Description: Returns a book matching the title.
+          li Example:
+            a(href="/books/unicorn") /books/unicorn
+          br
+        li.item GET /authors/{id or name}
+        ul
+          li Route: localhost:8080/authors/{id or name}
+          li Description: Returns the matching author's books
+          li Example:
+            a(href="/authors/beagle") /authors/beagle
+          br
+        li.item POST /books
+        ul
+          li Route: localhost:8080/books
+          li Headers:
+          ul
+            li Content-Type: application/json
+          li Body:
+            .code { "title": "Vathek", "author": "William Beckford", "publishYear": "1971", "publishOriginYear": "1786", "originalPublisher": "J. Johnson", "coverArtist": "Ray Cruz" }
+          li Description: Creates a new book from the data provided.
+          br
+        li.item PATCH
+        ul
+          li Route: localhost:8080/books/:{coverArtist}
+          li Body:
+            .code { "coverArtist": "Gervasio Gallardo" }
+          li Description: Adds/updates the value to the key in the specified title, 
+            | in this case the name of the cover artist. 
+          br
+        li.item DELETE
+        ul
+          li Route: localhost:8080/books/:{id}
+          li Description: Deletes the book associated with the ID provided (numbers 1 through 18, currently).
+          br
+      img.calligraph(src="/img/calligraph.png")
